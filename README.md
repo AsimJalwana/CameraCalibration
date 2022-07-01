@@ -1,4 +1,4 @@
-# Camera Calibration and Pose Estimation Using Markers
+# Camera Calibration
 
 ## Getting Started
 This is a PyCharm project that does the following tasks
@@ -14,6 +14,19 @@ Many different patterns are used for calibration. The most commonly used pattern
 * scipy 1.8.0 (https://www.scipy.org/)
 
 ### How to Run this Software?
-* run the ScriptForCameraCalibration.py, if you are interested in calibrating a camera.
+First we need a calibration pattern. One can download it from https://markhedleyjones.com/projects/calibration-checkerboard-collection and print it out. Please note 
+that one needs to paste the pattern on a card board or any flat surface to keep it flat. The code assumes that. 
+
+Take many photographs of the Calibration patern from the camera and place it in folder 'CapturedImages'. Once done, kindly check
+```CameraCalibration\ChessBoard.py``` and set the ```___BLOCK_SIZE_MM``` on Line 10. This variable accepts the size of pattern block in millimetres.
+
+That is all the setting! 
+
+The code can be run as 
+```python
+python ScriptForCameraCalibration.py
+```
+It will print out the calibration matrices as well as save it in folder ```savedCameraCalibration```
+
 
 
