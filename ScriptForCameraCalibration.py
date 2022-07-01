@@ -15,8 +15,8 @@ while(True):
     checkerBoard.show()
     checkerBoard.showGray()
     patternFound = checkerBoard.calculateObjectnImagePointsnDisplay(drawCorners = True)
+
     if patternFound:
-        checkerBoard.save()
         frequencyOfPatternFound = frequencyOfPatternFound + 1
 
         if frequencyOfPatternFound > 5:
