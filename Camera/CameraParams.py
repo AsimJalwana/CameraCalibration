@@ -86,6 +86,10 @@ class CameraParams:
 
     def save(self):
         fileName = "CameraParams_" + Utilities.Utils.getTimestampAsString() + '.pkl'
+
+        if not os.path.exists(self.__SAVE_DIRECTORY):
+            os.makedirs(self.__SAVE_DIRECTORY)
+
         with open(os.path.join(self.__SAVE_DIRECTORY, fileName), 'wb') as output:
             pickle.dump(self, output, pickle.HIGHEST_PROTOCOL)
         pass
